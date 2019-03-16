@@ -38,11 +38,6 @@ def search_books_tags(container, search):
         if search_tag in book['tags'].lower():
             result.append(book)
             continue  # не даёт идти дальше на 30 строку
-
-        if search_tag in book['author'].lower():
-            result.append(book)
-            continue  # пока не нужно, но на будущее пригодиться, если будем добавлять новые возможности
-
     return result
 
 #Поиск по полному совпадению
@@ -53,8 +48,4 @@ def search_full(container, search):
         if search_lowercased in book['title'].lower() == book['title'].lower():
             result.append(book)
             continue
-
-        if search_lowercased in book['author'].lower():
-            result.append(book)
-            continue  # пока не нужно, но на будущее пригодиться
     return result
