@@ -18,6 +18,9 @@ print(search_books_tags(books, 'доктор'))
 #Поиск по названию книги
 print(search_books(books, 'мир'))
 
+#Поиск по полному совпадению в названии книги
+print(search_full(books, 'палата 6'))
+
 
 # print(list_books(books, 1, 1))
 #print(list_books(books, 1, 1))

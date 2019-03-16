@@ -45,7 +45,7 @@ def search_full(container, search):
     search_lowercased = search.strip().lower()
     result = []
     for book in container:
-        if search_lowercased in book['title'].lower() == book['title'].lower():
+        if search_lowercased == book['title'].lower():
             result.append(book)
             continue
     return result
