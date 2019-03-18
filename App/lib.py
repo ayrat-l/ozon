@@ -42,10 +42,6 @@ def search_books_tags(container, search):
 
 #Поиск по полному совпадению
 def search_full(container, search):
-    """
-    >>> search_full(books, 'Война и Мир')
-    [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}]
-    """
     search_lowercased = search.strip().lower()
     result = []
     for book in container:
