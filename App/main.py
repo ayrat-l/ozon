@@ -19,10 +19,4 @@ print(search_books_tags(books, '#любовь'))
 print(search_books(books, 'мир'))
 
 #Поиск по полному совпадению в названии книги
-print(search_full(books, 'палата 6'))
-
-
-# print(list_books(books, 1, 1))
-#print(list_books(books, 1, 1))
-
-
+print(search_full(books, 'Война и Мир'))
