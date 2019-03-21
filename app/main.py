@@ -1,4 +1,4 @@
-from App.lib import *
+from app.lib import create_book, add_book, search_by_tags, search_books, search_full
 
 books = []
 
@@ -14,7 +14,7 @@ add_book(books, book_anna_karenina)
 add_book(books, book_chamber6)
 
 #Поиск по тегу
-print(search_books_tags(books, '#любовь'))
+print(search_by_tags(books, '#любовь'))
 
 #Поиск по названию книги
 print(search_books(books, 'мир'))
