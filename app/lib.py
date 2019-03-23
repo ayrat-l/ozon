@@ -54,3 +54,13 @@ def search_full(container, search):
             result.append(book)
             continue
     return result
+
+
+# Поиск по цене
+def search_by_price(container, search):
+    result = []
+    for book in container:
+        if book['price'] <= search:
+            result.append(book)
+            continue
+    return result

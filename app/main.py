@@ -1,4 +1,4 @@
-from app.lib import create_book, add_book, search_by_tags, search_books, search_full
+from app.lib import create_book, add_book, search_by_tags, search_books, search_full, search_by_price
 
 books = []
 
@@ -20,3 +20,6 @@ print(search_books(books, 'мир'))
 
 # Поиск по полному совпадению в названии книги
 print(search_full(books, 'Война и Мир'))
+
+# Поиск по цене
+print(search_by_price(books, 500))
