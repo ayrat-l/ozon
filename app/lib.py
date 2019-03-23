@@ -7,6 +7,7 @@ def create_book(title, author, price, tags, availability):
         'availability': availability
     }
 
+
 def add_book(container, book):
     container.append(book)
 
@@ -16,6 +17,7 @@ def list_books(container, page, page_size):
     start = (page - 1) * page_size  # для первой страницы стартуем с 0
     finish = start + page_size
     return container[start:finish]
+
 
 def search_books(container, search):  # search - строка поиска
     search_lowercased = search.strip().lower()  # 1. search.strip() 2. (результат search.strip()).lower()
@@ -31,7 +33,8 @@ def search_books(container, search):  # search - строка поиска
 
     return result
 
-#Поиск по тегу
+
+# Поиск по тегу
 def search_by_tags(container, search):
     search_tag = search.strip().lower()  # 1. search.strip() 2. (результат search.strip()).lower()
     result = []
@@ -42,7 +45,7 @@ def search_by_tags(container, search):
     return result
 
 
-#Поиск по полному совпадению
+# Поиск по полному совпадению
 def search_full(container, search):
     search_lowercased = search.strip().lower()
     result = []
