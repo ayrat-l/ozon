@@ -23,7 +23,7 @@ def search_books(container, search):  # search - строка поиска
     for book in container:
         if search_lowercased in book['title'].lower():
             result.append(book)
-            continue  # не даёт идти дальше на 30 строку
+            continue  # не даёт идти дальше на 28 строку
 
         if search_lowercased in book['author'].lower():
             result.append(book)
