@@ -16,21 +16,25 @@ def test_add_book():
     assert book in books
 
 def test_search_books():
-    books = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}]
+    books = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}, {'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}, {'title': 'Палата 6', 'author': 'Антон Чехов', 'price': 600, 'tags': ['#больница', '#шесть', '#доктор'], 'availability': True}]
+    book = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}]
     result = search_books(books, 'война')
-    assert result == books
+    assert result == book
 
 def test_search_by_tags():
-    books = [{'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}]
+    books = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}, {'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}, {'title': 'Палата 6', 'author': 'Антон Чехов', 'price': 600, 'tags': ['#больница', '#шесть', '#доктор'], 'availability': True}]
+    book = [{'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}]
     result = search_by_tags(books, '#поезд')
-    assert result == books
+    assert result == book
 
 def test_search_full():
-    books = [{'title': 'Палата 6', 'author': 'Антон Чехов', 'price': 600, 'tags': ['#больница', '#шесть', '#доктор'], 'availability': True}]
+    books = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}, {'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}, {'title': 'Палата 6', 'author': 'Антон Чехов', 'price': 600, 'tags': ['#больница', '#шесть', '#доктор'], 'availability': True}]
+    book = [{'title': 'Палата 6', 'author': 'Антон Чехов', 'price': 600, 'tags': ['#больница', '#шесть', '#доктор'], 'availability': True}]
     result = search_full(books, 'палата 6')
-    assert result == books
+    assert result == book
 
 def test_search_by_price():
-    books = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}, {'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}]
+    books = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}, {'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}, {'title': 'Палата 6', 'author': 'Антон Чехов', 'price': 600, 'tags': ['#больница', '#шесть', '#доктор'], 'availability': True}]
+    book = [{'title': 'Война и Мир', 'author': 'Лев Толстой', 'price': 500, 'tags': ['#война', '#любовь', '#толстой'], 'availability': True}, {'title': 'Анна Каренина', 'author': 'Лев Толстой', 'price': 300, 'tags': ['#поезд', '#любовь', '#толстой'], 'availability': False}]
     result = search_by_price(books, 500)
-    assert result == books
+    assert result == book
